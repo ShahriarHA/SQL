@@ -55,6 +55,8 @@ create table Teaches
     foreign key (ID) references Instructor(ID)
 );
 
+insert into instructor values(1002,"Smith","Biology",60000);
+
 
 
 
