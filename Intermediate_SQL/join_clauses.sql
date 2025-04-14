@@ -24,6 +24,13 @@ from world.city as wc
 join world.city as wc1
 on wc.ID+1 = wc1.ID
 
+-- cross join: returns all records from both tables.
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+CROSS JOIN Orders;
+
+
  
 
 
