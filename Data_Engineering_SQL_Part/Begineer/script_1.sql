@@ -74,8 +74,15 @@ FROM [sales].[customers] AS C
 GROUP BY C.city
 ORDER BY C.city;
 
-
-
+---- Example: total stock quantity per product
+SELECT * FROM [production].[stocks] WHERE product_id = 1;-- analysis
+SELECT * FROM [production].[products]; -- analysis
+-- SQL QUERY
+SELECT P.product_id,P.product_name,SUM(S.quantity) AS Total_stock_quantity
+FROM [production].[products] AS P
+JOIN [production].[stocks] AS S
+ON P.product_id = S.product_id
+GROUP BY P.product_name,P.product_id;
 
 
 
